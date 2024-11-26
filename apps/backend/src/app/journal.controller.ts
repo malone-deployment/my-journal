@@ -7,6 +7,11 @@ import { JournalEntity } from './journal.entity';
 export class JournalController {
   constructor(private readonly journalService: JournalService) {}
 
+  @Get('fck')
+  fck() {
+    return 'fck this fck this shit';
+  }
+
   @Get()
   getData(): Promise<JournalEntity[]> {
     return this.journalService.getData();

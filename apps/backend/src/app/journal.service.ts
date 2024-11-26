@@ -8,7 +8,7 @@ import { MessageDto } from './journal.dto';
 export class JournalService {
   constructor(
     @InjectRepository(JournalEntity)
-    private journalRepository: Repository<JournalEntity>
+    private journalRepository: Repository<JournalEntity>,
   ) {}
 
   getData(): Promise<JournalEntity[]> {
