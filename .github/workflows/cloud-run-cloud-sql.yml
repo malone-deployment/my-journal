@@ -55,14 +55,14 @@ jobs:
 
       # WEB
       - name: 'Build and Push web Image to Artifact Registry'
-        run: |
+        run: |-
           DOCKER_TAG="asia-southeast1-docker.pkg.dev/rpi-hub-438905/test-repository/web-image:${{ github.sha }}"
           docker build -f apps/web/Dockerfile -t "${DOCKER_TAG}" .
           gcloud auth configure-docker '${{ env.REGION }}-docker.pkg.dev'
           docker push "${DOCKER_TAG}"
 
       - name: 'Deploy web Image to Cloud Run'
-        run: |
+        run: |-
           gcloud run deploy "${{ env.WEB_SERVICE }}" \
           --image "${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.GAR_REPOSITORY_NAME }}/${{ env.WEB_IMAGE }}:${{ github.sha }}" \
           --update-labels managed-by=github-actions,commit-sha="${{ github.sha }}" \
