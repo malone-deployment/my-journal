@@ -42,7 +42,8 @@ function MyForm() {
   }, []);
 
   async function onSubmit(values: FormData) {
-    const URL = 'http://localhost:3000/api/journal';
+    const URL =
+      'https://backend-service-1-422041495987.asia-southeast1.run.app/api/journal';
     console.log(values);
     try {
       const response = await fetch(URL, {
