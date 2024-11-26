@@ -19,7 +19,7 @@ function MyForm() {
 
   const [receivedData, setReceivedData] = useState<ListJournal[]>([]);
   const URL =
-    'https://backend-service-1-422041495987.asia-southeast1.run.app/api/journal';
+    'https://backend-service-1-422041495987.asia-southeast1.run.app/api/journal/';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,7 +43,7 @@ function MyForm() {
 
   async function onSubmit(values: FormData) {
     const URL =
-      'https://backend-service-1-422041495987.asia-southeast1.run.app/api/journal';
+      'https://backend-service-1-422041495987.asia-southeast1.run.app/api/journal/';
     console.log(values);
     try {
       const response = await fetch(URL, {
