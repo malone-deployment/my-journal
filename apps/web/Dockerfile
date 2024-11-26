@@ -9,7 +9,8 @@ COPY . .
 RUN npm install
 
 # Build the frontend using Nx
-RUN npx nx build web --prod
+RUN npx nx run web:build --prod
+
 
 
 # Step 2: Serve the built frontend with NGINX
