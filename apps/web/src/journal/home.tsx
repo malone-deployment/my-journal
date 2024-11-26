@@ -18,7 +18,8 @@ function MyForm() {
   };
 
   const [receivedData, setReceivedData] = useState<ListJournal[]>([]);
-  const URL = 'http://localhost:3000/api/journal';
+  const URL =
+    'https://web-service-1-422041495987.asia-southeast1.run.app/journal';
 
   useEffect(() => {
     const fetchData = async () => {
