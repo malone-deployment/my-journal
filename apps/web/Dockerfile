@@ -11,6 +11,7 @@ RUN npm install
 # Build the frontend using Nx
 RUN npx nx build web --prod
 
+
 # Step 2: Serve the built frontend with NGINX
 FROM nginx:stable-alpine
 ENV PORT 8080
