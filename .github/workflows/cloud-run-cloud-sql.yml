@@ -52,8 +52,8 @@ env:
   BACKEND_IMAGE: 'backend-image' # backend image name
   WEB_IMAGE: 'web-image' # web image name
 
-  BACKEND_SERVICE: 'backend-service' # Cloud Run service name
-  WEB_SERVICE: 'web-service' # Cloud Run service name
+  BACKEND_SERVICE: 'backend-service-1' # Cloud Run service name
+  WEB_SERVICE: 'web-service-1' # Cloud Run service name
 
   POSTGRES_CLOUDSQL_INSTANCE: ${{ secrets.POSTGRES_CLOUDSQL_INSTANCE }}
   POSTGRES_INSTANCE_UNIX_SOCKET: ${{ secrets.POSTGRES_INSTANCE_UNIX_SOCKET }}
