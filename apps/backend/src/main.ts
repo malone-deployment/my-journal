@@ -15,7 +15,7 @@ async function bootstrap() {
   app.setGlobalPrefix(globalPrefix);
   await app.listen(PORT, HOST).then(() => {
     console.log(
-      `🚀 Nest Live Development Server is listening on ${HOST}:${PORT}, open your browser on http://localhost:${PORT}/${globalPrefix}`,
+      `🚀 Nest Live Development Server is listening on ${HOST}:${PORT}, open your browser on http://localhost:${PORT}/${globalPrefix}/journal`,
     );
   });
 }
